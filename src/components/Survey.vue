@@ -1,10 +1,12 @@
 <template>
-
-  <ul id="survey">
-      <li v-for="question in questions">
-        {{ question.message }}
-      </li>
-  </ul>
+  
+  <div id="survey">
+    <ul>
+        <li v-for="question in questions">
+          {{ question.message }}
+        </li>
+    </ul>
+  </div>
 
 </template>
 

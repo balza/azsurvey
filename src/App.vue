@@ -2,11 +2,7 @@
 
   <div id="app">
     <img src="./assets/logo.png">
-    <ul class="list-inline">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/survey">Survey</router-link></li>
-    </ul>
-    <router-view class="view"></router-view>
+    <router-view></router-view>
   </div>
 
 </template>
