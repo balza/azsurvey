@@ -1,11 +1,10 @@
 <template>
 
   <div id="administration">
-    <ul>
-        <li>
-          Administration
-        </li>
-    </ul>
+    <div>Administration</div>
+    <input v-model="question" placeholder="enter a new question">
+    <button v-on:click="addQuestion">Add Question</button>    
+    <div v-for="q in questions">{{ q }}</div>
   </div>
 
 </template>
@@ -17,10 +16,12 @@ export default {
   name: 'administration',
   data () {
     return {
-      questions: [
-        {message: 'question1'},
-        {message: 'question2'}
-      ]
+      questions: []
+    }
+  },
+  methods: {
+    addQuestion: function (event) {
+      this.questions.push(this.question)
     }
   }
 }
